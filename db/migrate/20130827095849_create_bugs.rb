@@ -1,7 +1,7 @@
 class CreateBugs < ActiveRecord::Migration
   def change
     create_table :bugs do |t|
-      t.string :twitter_handle
+      t.string :service_twitter
       t.string :short_description
       t.text :long_description
 

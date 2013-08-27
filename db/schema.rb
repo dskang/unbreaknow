@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20130827095849) do
   enable_extension "plpgsql"
 
   create_table "bugs", force: true do |t|
-    t.string   "twitter_handle"
+    t.string   "service_twitter"
     t.string   "short_description"
     t.text     "long_description"
     t.datetime "created_at"
