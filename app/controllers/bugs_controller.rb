@@ -21,11 +21,6 @@ class BugsController < ApplicationController
     @bug = Bug.find(params[:id])
   end
 
-  def destroy
-    @bug = Bug.find(params[:id])
-    @bug.destroy
-  end
-
   private
     def bug_params
       params.require(:bug).permit(:twitter_handle, :short_description, :long_description)

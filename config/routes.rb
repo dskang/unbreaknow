@@ -7,7 +7,7 @@ Unbreaknow::Application.routes.draw do
 
   get '/new', to: 'bugs#new'
 
-  resources :bugs, except: [:edit, :update]
+  resources :bugs, only: [:index, :new, :create, :show]
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
