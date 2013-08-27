@@ -5,8 +5,6 @@ Unbreaknow::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'welcome#index'
 
-  get '/new', to: 'bugs#new'
-
   resources :bugs, only: [:index, :new, :create, :show]
 
   # Example of regular route:
