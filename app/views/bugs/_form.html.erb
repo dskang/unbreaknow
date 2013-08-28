@@ -15,10 +15,10 @@
     <div class="text h3">Unbreak</div>
     <div class="input-group input-group-lg">
       <span class="input-group-addon">@</span>
-      <%= f.text_field :service_twitter, class: "form-control input-lg", placeholder: "Twitter username of product/service/company" %>
+      <%= f.text_field :service_twitter, class: "form-control input-lg", placeholder: "Twitter username of product/service/company", maxlength: 50 %>
     </div>
     <div class="text h3">by</div>
-    <%= f.text_field :short_description, class: "form-control input-lg", placeholder: "What should be done?" %>
+    <%= f.text_field :short_description, class: "form-control input-lg", placeholder: "What should be done?", maxlength: 100 %>
   </div>
 
   <div class="form-group">
