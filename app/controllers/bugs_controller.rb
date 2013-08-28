@@ -23,6 +23,6 @@ class BugsController < ApplicationController
 
   private
     def bug_params
-      params.require(:bug).permit(:twitter_handle, :short_description, :long_description)
+      params.require(:bug).permit(:service_twitter, :short_description, :long_description)
     end
 end

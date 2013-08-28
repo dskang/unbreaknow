@@ -13,13 +13,17 @@
 
   <div class="form-group tweet-form">
     <div class="text h3">UNBREAK</div>
-    <div class="input-group">
+    <div class="input-group input-group-lg">
       <span class="input-group-addon">@</span>
-      <%= f.text_field :service_twitter, class: "form-control", placeholder: "Twitter username of buggy service" %>
+      <%= f.text_field :service_twitter, class: "form-control input-lg", placeholder: "Twitter username of product/service/company" %>
     </div>
     <div class="text h3">BY</div>
-    <%= f.text_field :short_description, class: "form-control", placeholder: "What should be done?" %>
+    <%= f.text_field :short_description, class: "form-control input-lg", placeholder: "What should be done?" %>
   </div>
+
+  <div class="form-group">
+  </div>
+
   <div class="actions">
     <%= f.submit "Submit", class: "btn btn-primary btn-lg btn-block" %>
   </div>
