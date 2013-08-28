@@ -17,4 +17,11 @@
   </div>
 </div>
 
+<% unless @bug.long_description.blank? %>
+  <div class="description">
+    <h4>Description</h4>
+    <p><%= simple_format @bug.long_description %></p>
+  </div>
+<% end %>
+
 <script src="//platform.twitter.com/widgets.js"></script>
