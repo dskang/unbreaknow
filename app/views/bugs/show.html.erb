@@ -1,18 +1,16 @@
 <div class="tweet-box">
   <div class="tweet-content">
     <% twitter_link = link_to "@#{@bug.service_twitter}", "https://twitter.com/#{@bug.service_twitter}" %>
-    <% current_url_link = link_to @current_url %>
     <% hashtag_link = link_to "#unbreaknow", "https://twitter.com/search?q=%23unbreaknow" %>
-    <%= "Unbreak #{twitter_link} by #{@bug.short_description} #{current_url_link} #{hashtag_link}".html_safe %>
+    <%= "Unbreak #{twitter_link} by #{@bug.short_description} #{hashtag_link}".html_safe %>
   </div>
 
   <div class="tweet-button">
     <a href="https://twitter.com/share"
       class="twitter-share-button"
       data-count="none"
-      data-url=""
       data-size="large"
-      data-text="<%= "Unbreak @#{@bug.service_twitter} by #{@bug.short_description} #{@current_url} #unbreaknow" %>"
+      data-text="<%= "Unbreak @#{@bug.service_twitter} by #{@bug.short_description} #unbreaknow" %>"
       data-related="unbreaknow"
       data-lang="en">Tweet</a>
   </div>
