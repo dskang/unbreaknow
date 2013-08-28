@@ -19,6 +19,13 @@ class BugsController < ApplicationController
 
   def show
     @bug = Bug.find(params[:id])
+
+    twitter_params = {}
+    twitter_params[:url] = request.original_url
+    twitter_params[:hashtags] = 'unbreaknow'
+    twitter_params[:text] = "Unbreak #{@bug.service_twitter} by #{@bug.short_description}"
+    @twitter_params = twitter_params.to_query
+
     @current_url = request.original_url
   end
 

@@ -7,14 +7,8 @@
   </div>
 
   <div class="tweet-button">
-    <a href="https://twitter.com/share"
-      class="twitter-share-button"
-      data-count="none"
-      data-url=""
-      data-size="large"
-      data-text="<%= "Unbreak @#{@bug.service_twitter} by #{@bug.short_description} #{@current_url} #unbreaknow" %>"
-      data-related="unbreaknow"
-      data-lang="en">Tweet</a>
+    <% tweet_text = "Unbreak @#{@bug.service_twitter} by #{@bug.short_description}" %>
+    <%= link_to "Tweet Your Support", "http://twitter.com/intent/tweet?#{@twitter_params}", class: "btn btn-primary btn-lg btn-block" %>
   </div>
 </div>
 
