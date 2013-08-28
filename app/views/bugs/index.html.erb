@@ -1,9 +1,11 @@
-<%= link_to "Submit a bug", new_bug_path, class: "btn btn-primary btn-lg btn-block" %>
+<%= link_to "Express your rage about that tiny bug", new_bug_path, class: "btn btn-danger btn-lg btn-block" %>
+
+<hr class="divider"/>
 
 <div class="bugs">
   <% @bugs.each do |bug| %>
     <div class="summary">
-      <%= link_to "Unbreak @#{bug.service_twitter} by #{bug.short_description}", bug %>
+      <%= link_to "Unbreak @#{bug.service_twitter} by #{bug.short_description}", bug, class: "btn btn-primary btn-lg btn-block" %>
     </div>
   <% end %>
 </div>
