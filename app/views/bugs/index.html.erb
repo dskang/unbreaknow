@@ -1,3 +1,7 @@
-<% @bugs.each do |bug| %>
-  <%= link_to "Unbreak #{bug.service_twitter} by #{bug.short_description}", bug %>
-<% end %>
+<div class="bugs">
+  <% @bugs.each do |bug| %>
+    <div class="summary">
+      <%= link_to "Unbreak @#{bug.service_twitter} by #{bug.short_description}", bug %>
+    </div>
+  <% end %>
+</div>

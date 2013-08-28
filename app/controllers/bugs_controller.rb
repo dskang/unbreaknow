@@ -19,6 +19,7 @@ class BugsController < ApplicationController
 
   def show
     @bug = Bug.find(params[:id])
+    @current_url = request.original_url
   end
 
   private
