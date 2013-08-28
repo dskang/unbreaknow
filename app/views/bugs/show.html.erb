@@ -1,14 +1,13 @@
 <div class="tweet-box">
   <div class="tweet-content">
     <% twitter_link = link_to "@#{@bug.service_twitter}", "https://twitter.com/#{@bug.service_twitter}" %>
-    <% current_url_link = link_to @current_url %>
     <% hashtag_link = link_to "#unbreaknow", "https://twitter.com/search?q=%23unbreaknow" %>
-    <%= "Unbreak #{twitter_link} by #{@bug.short_description} #{current_url_link} #{hashtag_link}".html_safe %>
+    <%= "Unbreak #{twitter_link} by #{@bug.short_description} #{hashtag_link}".html_safe %>
   </div>
 
   <div class="tweet-button">
     <% tweet_text = "Unbreak @#{@bug.service_twitter} by #{@bug.short_description}" %>
-    <%= link_to "Tweet Your Support", "http://twitter.com/intent/tweet?#{@twitter_params}", class: "btn btn-primary btn-lg btn-block" %>
+    <%= link_to "Tweet Your Support", "http://twitter.com/intent/tweet?#{@twitter_params}", class: "btn btn-success btn-lg btn-block" %>
   </div>
 </div>
 
