@@ -16,5 +16,5 @@
 #= require_tree .
 
 # Google Analytics
-$(document).on 'page:change', ->
+$(document).on 'page:load', ->
   window.ga?('send', 'pageview')
