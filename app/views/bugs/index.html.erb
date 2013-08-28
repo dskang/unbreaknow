@@ -2,8 +2,16 @@
 
 <hr class="divider"/>
 
-<ul class="list-group">
-  <% @bugs.each do |bug| %>
-    <%= link_to "Unbreak @#{bug.service_twitter} by #{bug.short_description}", bug, class: "list-group-item" %>
-  <% end %>
+<div>
+  <ul class="list-group">
+    <% @bugs.each do |bug| %>
+      <%= link_to "Unbreak @#{bug.service_twitter} by #{bug.short_description}", bug, class: "list-group-item" %>
+    <% end %>
+  </ul>
+</div>
+
+<hr class="divider"/>
+
+<div class="credits">
+  by <a href="https://twitter.com/dskang">@dskang</a>
 </div>
