@@ -1,6 +1,6 @@
 class BugsController < ApplicationController
   def index
-    @bugs = Bug.last 10
+    @bugs = Bug.order("created_at DESC").first 10
   end
 
   def new
