@@ -3,11 +3,10 @@
 <hr class="divider"/>
 
 <div>
-  <ul class="list-group">
-    <% @bugs.each do |bug| %>
-      <%= link_to "Unbreak @#{bug.service_twitter} by #{bug.short_description}", bug, class: "list-group-item" %>
-    <% end %>
-  </ul>
+  <a class="twitter-timeline"
+    width="690"
+    href="https://twitter.com/search?q=%23unbreaknow"
+    data-widget-id="372880302592376832">Tweets about "#unbreaknow"</a>
 </div>
 
 <hr class="divider"/>
@@ -15,3 +14,5 @@
 <div class="credits">
   by <a href="https://twitter.com/dskang">@dskang</a>
 </div>
+
+<script src="//platform.twitter.com/widgets.js"></script>
