@@ -2,6 +2,17 @@
 
 <hr class="divider"/>
 
+<div class="recent">
+  <h4>Most Recent</h4>
+  <ul class="list-group">
+    <% @bugs.each do |bug| %>
+      <%= link_to "Unbreak @#{bug.service_twitter} by #{bug.short_description}", bug, class: "list-group-item" %>
+    <% end %>
+  </ul>
+</div>
+
+<hr class="divider"/>
+
 <div class="timeline">
   <a class="twitter-timeline"
     data-chrome="nofooter transparent"
