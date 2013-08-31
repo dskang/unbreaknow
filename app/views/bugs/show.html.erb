@@ -1,21 +1,38 @@
-<div class="tweet-box">
-  <div class="tweet-content">
-    <% twitter_link = link_to "@#{@bug.service_twitter}", "https://twitter.com/#{@bug.service_twitter}" %>
-    <% hashtag_link = link_to "#unbreaknow", "https://twitter.com/search?q=%23unbreaknow" %>
-    <%= "Unbreak #{twitter_link} by #{@bug.short_description} #{hashtag_link}".html_safe %>
+<div class="bug-info">
+  <div class="tweet-box">
+    <div class="tweet-content">
+      <% twitter_link = link_to "@#{@bug.service_twitter}", "https://twitter.com/#{@bug.service_twitter}" %>
+      <% hashtag_link = link_to "#unbreaknow", "https://twitter.com/search?q=%23unbreaknow" %>
+      <%= "Unbreak #{twitter_link} by #{@bug.short_description} #{hashtag_link}".html_safe %>
+    </div>
+
+    <div class="tweet-button">
+      <% tweet_text = "Unbreak @#{@bug.service_twitter} by #{@bug.short_description}" %>
+      <%= link_to "I want this fixed!", "http://twitter.com/intent/tweet?#{@twitter_params}", class: "btn btn-success btn-lg btn-block" %>
+    </div>
   </div>
 
-  <div class="tweet-button">
-    <% tweet_text = "Unbreak @#{@bug.service_twitter} by #{@bug.short_description}" %>
-    <%= link_to "I want this fixed!", "http://twitter.com/intent/tweet?#{@twitter_params}", class: "btn btn-success btn-lg btn-block" %>
-  </div>
+  <% unless @bug.long_description.blank? %>
+    <div class="description">
+      <h4>Description</h4>
+      <p><%= simple_format @bug.long_description %></p>
+    </div>
+  <% end %>
 </div>
 
-<% unless @bug.long_description.blank? %>
-  <div class="description">
-    <h4>Description</h4>
-    <p><%= simple_format @bug.long_description %></p>
-  </div>
-<% end %>
+<div id="disqus_thread"></div>
+
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'unbreaknow';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
 <script src="//platform.twitter.com/widgets.js"></script>
